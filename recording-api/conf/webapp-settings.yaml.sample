@@ -33,3 +33,7 @@ BIND: "0.0.0.0:8888"
 # if no running scenario found
 # Unset or set to False to only record if a recording sessoin is created
 ALWAYS_RECORD: True
+
+MQTT: 
+    host: masdev.messaging.iot.iccce.apps.maximodemo.poc.icc
+    port: 443

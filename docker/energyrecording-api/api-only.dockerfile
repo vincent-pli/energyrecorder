@@ -13,7 +13,7 @@ ADD api-only-entrypoint.sh /entrypoint.sh
 USER recording-api
 
 RUN cd $HOME && \
-    git clone https://github.com/bherard/energyrecorder
+    git clone git@github.com:vincent-pli/energyrecorder.git
 
 USER root
 
@@ -21,7 +21,8 @@ RUN cd /home/recording-api/energyrecorder/recording-api/ &&\
     pip install -r requirements.txt && \
     cd conf && \
     cp webapp-logging.conf.sample webapp-logging.conf && \
-    cp webapp-settings.yaml.sample webapp-settings.yaml
+    cp webapp-settings.yaml.sample webapp-settings.yaml && \
+    cp cacert.pem cacert.pem
 
 USER recording-api
 
