@@ -10,7 +10,7 @@ RUN apk --update add git python3 py3-pip bash ca-certificates curl uwsgi-python3
     apk add openssl &&\
     pip3 install --upgrade pip &&\
     cd /usr/local/ &&\
-    git clone https://github.com/bherard/energyrecorder &&\
+    git clone https://github.com/vincent-pli/energyrecorder.git &&\
     cd energyrecorder &&\
     pip install -r recording-api/requirements.txt &&\
     mv /entrypoint.sh /influx-entrypoint.sh && \
