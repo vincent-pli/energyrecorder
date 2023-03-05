@@ -195,9 +195,9 @@ if [ "$ADMIN_USER" != "" -o "$ADMIN_PASS" != "" -o "$READER_USER" != "" -o "$REA
         fi
 fi
 
-confApp "$1" "$2"
+confApp "$ADMIN_USER" "$ADMIN_PASS"
 if [ $INFLUX -eq 1 ] ; then
-        startInflux "$1" "$2" "$3" "$4"
+        startInflux "$ADMIN_USER" "$ADMIN_PASS" "$READER_USER" "$READER_PASS"
 fi
 # startUwsgi
 # startNginx
