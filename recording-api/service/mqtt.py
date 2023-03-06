@@ -61,6 +61,7 @@ class MQTTService:
         # config['options']['mqtt']['caFile'] = self.cacert_path
         config['identity']['typeId'] = typeID
         config['identity']['deviceId'] = deviceID
+        return config
 
     def _commandCallback(self, cmd):
         self.logger.info("Command received: %s" % cmd.data)  
