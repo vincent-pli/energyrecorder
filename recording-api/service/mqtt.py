@@ -40,7 +40,7 @@ class MQTTService:
             "token": "1qaz2wsx"
         },
         "options": {
-            "domain": "masdev.messaging.iot.csc.apps.ocp410.cluster.local.com",
+            "domain": "iot.csc.apps.ocp410.cluster.local.com",
             "mqtt": {
                 "port": 443,
                 "transport": "tcp",
