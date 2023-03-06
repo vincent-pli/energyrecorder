@@ -48,7 +48,7 @@ class MQTTService:
                 "sessionExpiry": 3600,
                 "keepAlive": 60,
                 # come from mas-ibmce-iot/ibmce-public-tls(secret)
-                "caFile": "/usr/local/energyrecorder/recording-api/conf"
+                "caFile": "/usr/local/energyrecorder/recording-api/conf/cacert.pem"
             },
             "http": {"verify": False}
         }
