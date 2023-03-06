@@ -10,7 +10,7 @@ function startInflux(){
                 AUTH_ENABLED=false
                 echo "show databases" | influx |grep NRG
         fi
-        if [ $? -ne 0 ] ; then
+        if [ $? -ne 1 ] ; then
                 curl https://raw.githubusercontent.com/bherard/energyrecorder/master/influx/creation.iql|influx
                 echo "CREATE USER $1 WITH PASSWORD '"$2"' WITH ALL PRIVILEGES;"> /tmp/create.iql
                 echo "CREATE USER $3 WITH PASSWORD '"$4"';">> /tmp/create.iql
