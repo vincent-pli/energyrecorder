@@ -37,7 +37,7 @@ class MQTTService:
             "deviceId": "t-sensor-1"
         },
         "auth": {
-            "token": "12345QWERTqwert"
+            "token": "1qaz2wsx"
         },
         "options": {
             "domain": "masdev.messaging.iot.iccce.apps.maximodemo.poc.icc",
@@ -112,7 +112,7 @@ class MQTTService:
                 #     settings.MQTT["port"],
                 # )
                 self._mqtt_client = wiotp.sdk.device.DeviceClient(
-                    config=self._complete_config("host-rack-1", equipement), logHandlers=None)
+                    config=self._complete_config("lenovoRS_Devicetype", equipement), logHandlers=None)
 
                 self._mqtt_client.commandCallback = self._commandCallback
 
@@ -140,7 +140,7 @@ class MQTTService:
             # )
 
             # Send Data
-            self._mqtt_client.publishEvent(eventId="power",
+            self._mqtt_client.publishEvent(eventId="serverstatus",
                                 msgFormat="json", data=data, qos=0, onPublish=None)
 
             # Disconnect
