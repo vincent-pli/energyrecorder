@@ -9,6 +9,7 @@ RUN apk --update add git python3 py3-pip bash ca-certificates curl uwsgi-python3
     update-ca-certificates &&\
     apk add openssl &&\
     pip3 install --upgrade pip &&\
+    pip3 install gunicorn \
     cd /usr/local/ &&\
     git clone https://github.com/vincent-pli/energyrecorder.git &&\
     cd energyrecorder &&\
