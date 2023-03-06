@@ -58,7 +58,7 @@ class MQTTService:
         # config['auth']['token'] = self.server_conf['apikey']
         config['options']['domain'] = settings.MQTT["host"]
         config['options']['mqtt']['port'] = settings.MQTT["port"]
-        config['options']['mqtt']['caFile'] = self.cacert_path
+        # config['options']['mqtt']['caFile'] = self.cacert_path
         config['identity']['typeId'] = typeID
         config['identity']['deviceId'] = deviceID
 
