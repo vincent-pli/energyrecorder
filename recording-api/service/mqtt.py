@@ -40,7 +40,7 @@ class MQTTService:
             "token": "12345QWERTqwert"
         },
         "options": {
-            "domain": "iot.iccce.apps.maximodemo.poc.icc",
+            "domain": "masdev.messaging.iot.iccce.apps.maximodemo.poc.icc",
             "mqtt": {
                 "port": 443,
                 "transport": "tcp",
@@ -48,7 +48,7 @@ class MQTTService:
                 "sessionExpiry": 3600,
                 "keepAlive": 60,
                 # come from mas-ibmce-iot/ibmce-public-tls(secret)
-                "caFile": "conf/cacert.pem"
+                "caFile": "/usr/local/energyrecorder/recording-api/conf"
             },
             "http": {"verify": False}
         }
@@ -56,8 +56,8 @@ class MQTTService:
     def _complete_config(self, typeID, deviceID):
         config = self._config_template
         # config['auth']['token'] = self.server_conf['apikey']
-        config['options']['domain'] = settings.MQTT["host"]
-        config['options']['mqtt']['port'] = settings.MQTT["port"]
+        # config['options']['domain'] = settings.MQTT["host"]
+        # config['options']['mqtt']['port'] = settings.MQTT["port"]
         # config['options']['mqtt']['caFile'] = self.cacert_path
         config['identity']['typeId'] = typeID
         config['identity']['deviceId'] = deviceID
