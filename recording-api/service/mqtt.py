@@ -113,7 +113,7 @@ class MQTTService:
                 #     settings.MQTT["port"],
                 # )
                 self._mqtt_client = wiotp.sdk.device.DeviceClient(
-                    config=self._complete_config("lenovoRS_Devicetype", equipement), logHandlers=None)
+                    config=self._complete_config("hpDL_Devicetype", equipement), logHandlers=None)
 
                 self._mqtt_client.commandCallback = self._commandCallback
 
